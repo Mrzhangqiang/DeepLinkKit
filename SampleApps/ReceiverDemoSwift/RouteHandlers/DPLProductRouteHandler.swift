@@ -1,9 +1,9 @@
 import Foundation
 
-public class DPLProductRouteHandler: DPLRouteHandler {
-    public override func targetViewController() -> UIViewController! {
-        if let storyboard = UIApplication.sharedApplication().keyWindow?.rootViewController?.storyboard {
-            return storyboard.instantiateViewControllerWithIdentifier("detail") as! DPLProductDetailViewController
+open class DPLProductRouteHandler: DPLRouteHandler {
+    open override func targetViewController() -> UIViewController! {
+        if let storyboard = UIApplication.shared.keyWindow?.rootViewController?.storyboard {
+            return storyboard.instantiateViewController(withIdentifier: "detail") as! DPLProductDetailViewController
         }
         
         return UIViewController()
